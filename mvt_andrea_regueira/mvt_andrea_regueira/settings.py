@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Acá falta decirle al proyecto que creamos una app que se llama family
+    'family',
 ]
 
 MIDDLEWARE = [
@@ -51,10 +53,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mvt_andrea_regueira.urls'
 
-TEMPLATES = [
+TEMPLATES = [ # Dejame ver algo en mi pc un segundo, ahi vuelvo
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'C:/Users/andre/Documents/my_first_mvt/mvt_andrea_regueira/templates/'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
