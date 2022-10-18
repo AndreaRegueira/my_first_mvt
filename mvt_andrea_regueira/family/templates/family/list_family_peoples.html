@@ -9,11 +9,12 @@ import <!DOCTYPE html>
 <body>
     <h1>Listado de los miembros de la familia</h1>
     <hr>
-        <ul>{% for people in peoples %</ul>
-           <li>
-               {{people}}
-           </li>
-           { % endfor %}
+        <ul>
+            {% for people in peoples %}
+            <li>
+                {{people}}
+            </li>
+            {% endfor %}
         </ul>
     <hr>   
 </body>
