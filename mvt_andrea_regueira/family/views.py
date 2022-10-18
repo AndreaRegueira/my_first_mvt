@@ -2,13 +2,13 @@ from urllib import request
 from django.shortcuts import render
 from datetime import datetime
 
-from family.models import family_people
+from family.models import Family_people
 
 # Create your views here.
 
 def create_family_data(resquet, name:str, last_name:str, age:int, date_of_birth:str, profession:str):
     date_of_birth = datetime.strftime(date_of_birth, "%Y-%m-%d")
-    people = family_people(name=name, last_name=last_name, age=age, date_of_birth=date_of_birth, profession=profession)
+    people = Family_people(name=name, last_name=last_name, age=age, date_of_birth=date_of_birth, profession=profession)
     people.save()
 
     context_dict = {'people' : people}
@@ -20,7 +20,7 @@ def create_family_data(resquet, name:str, last_name:str, age:int, date_of_birth:
 
 
 def create_list_people(request):
-    peoples = family_people.objects.all()
+    peoples = Family_people.objects.all()
 
     context_dict = {'peoples'} , {peoples}
 
