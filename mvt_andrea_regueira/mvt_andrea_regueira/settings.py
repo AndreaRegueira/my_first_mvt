@@ -53,7 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mvt_andrea_regueira.urls'
 
-TEMPLATES = [ # Dejame ver algo en mi pc un segundo, ahi vuelvo
+TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [

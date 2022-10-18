@@ -22,7 +22,6 @@ def create_family_data(request, name:str, last_name:str, age:int, date_of_birth:
 def create_list_people(request):
     peoples = Family_people.objects.all()
 
-    # context_dict = {'peoples'} , {peoples}
     context_dict = {'peoples': peoples}
 
     return render(
